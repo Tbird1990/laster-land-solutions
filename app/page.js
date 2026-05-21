@@ -43,13 +43,33 @@ export default function LasterLandSolutionsWebsite() {
   ];
 
   const gallery = [
-    "Lot clearing",
-    "Brush cleanup",
-    "Driveway grading",
-    "Pad prep",
-    "Debris removal",
-    "Final cleanup",
-  ];
+    { title: "Stump Grinding", image: "/Images/stump1.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump1a.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump2.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump2a.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump3.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump3a.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump4.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump4a.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump5.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump5a.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump6.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump6a.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump7.jpg" },
+    { title: "Stump Grinding", image: "/Images/stump7a.jpg" },
+    { title: "Land Clearing", image: "/Images/debrisrmoval1.jpg" },
+    { title: "Land Clearing", image: "/Images/debrisremoval2.jpg" },
+    { title: "Land Clearing", image: "/Images/debrisremoval3.jpg" },
+    { title: "Landscaping", image: "/Images/landscape1.jpg" },
+    { title: "Landscaping", image: "/Images/landscape1a.jpg" },
+    { title: "Landscaping", image: "/Images/landscape2.jpg" },
+    { title: "Landscaping", image: "/Images/landscape3.jpg" },
+    { title: "Landscaping", image: "/Images/padrenewal1.jpg" },
+    { title: "Landscaping", image: "/Images/padrenewal2.jpg" },
+    { title: "Landscaping", image: "/Images/backfill.jpg" },
+    { title: "Landscaping", image: "/Images/backfill1ajpg" },
+    { title: "Landscaping", image: "/Images/backfill2.jpg" },
+ ];
 
   const highlights = [
     "Local West Tennessee service",
@@ -177,43 +197,47 @@ export default function LasterLandSolutionsWebsite() {
       </section>
 
       <section className="border-y border-white/10 bg-white/[0.03]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">About</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Local service. Clear communication. Clean finished work.</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Laster Land Solutions focuses on straightforward, dependable service for residential and light commercial
-              projects. The goal is simple: show up ready to work, communicate clearly, and leave the property in better
-              shape than it was before.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
-                <p className="text-sm text-slate-400">Service Area</p>
-                <p className="mt-2 text-lg font-bold">Jackson, TN and surrounding West Tennessee areas</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
-                <p className="text-sm text-slate-400">Best Way to Reach Us</p>
-                <p className="mt-2 text-lg font-bold">Call or text photos for faster quoting</p>
-              </div>
-            </div>
-          </div>
+  <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+    <div>
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">About</p>
+      <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Local service. Clear communication. Clean finished work.</h2>
+      <p className="mt-5 text-lg leading-8 text-slate-300">
+        Laster Land Solutions focuses on straightforward, dependable service for residential and light commercial
+        projects. The goal is simple: show up ready to work, communicate clearly, and leave the property in better
+        shape than it was before.
+      </p>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {gallery.map((item) => (
-              <div
-                key={item}
-                className="flex min-h-[170px] items-end rounded-3xl border border-white/10 bg-gradient-to-br from-slate-800 to-slate-900 p-5"
-              >
-                <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Project Type</p>
-                  <p className="mt-2 text-xl font-bold">{item}</p>
-                </div>
-              </div>
-            ))}
+      <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+          <p className="text-sm text-slate-400">Service Area</p>
+          <p className="mt-2 text-lg font-bold">Jackson, TN and surrounding West Tennessee areas</p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+          <p className="text-sm text-slate-400">Best Way to Reach Us</p>
+          <p className="mt-2 text-lg font-bold">Call or text photos for faster quoting</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="grid gap-4 sm:grid-cols-2">
+      {gallery.map((item, index) => (
+        <div
+          key={index}
+          className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70"
+        >
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-56 w-full object-cover"
+          />
+          <div className="p-4">
+            <p className="text-lg font-bold">{item.title}</p>
           </div>
         </div>
-      </section>
-
+      ))}
+    </div>
+  </div>
+</section>
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="rounded-[2rem] border border-white/10 bg-gradient-to-r from-emerald-400 to-cyan-300 p-[1px] shadow-2xl shadow-emerald-500/10">
           <div className="grid gap-8 rounded-[2rem] bg-slate-950 px-8 py-10 lg:grid-cols-[1fr_auto] lg:items-center">

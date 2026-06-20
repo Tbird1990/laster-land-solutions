@@ -85,45 +85,46 @@ export default function LasterLandSolutionsWebsite() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-black">
+    <div className="min-h-screen bg-slate-950 text-white">
       <section
   className="relative overflow-hidden border-b border-white/10 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/Images/BACKGROUND1.jpg')" }}
+  style={{ backgroundImage: "url('/Images/debrisremoval2.jpg')" }}
 >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.16),transparent_35%)]" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-6 lg:px-8">
-          <header className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
+        <header className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-6 shadow-2xl shadow-black/30 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
         <div className="flex-1">
-  <p className="text-left text-3xl font-bold tracking-wide lg:text-5xl">
+        <p className="text-center text-2xl font-bold tracking-wide sm:text-left sm:text-3xl lg:text-5xl">
     Laster Land Solutions LLC
   </p>
 </div>    
-            <div className="hidden gap-3 sm:flex">
+<div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="tel:7314149539"
-                className="rounded-xl border border-black/15 px-4 py-2 text-sm font-semibold text-black transition hover:bg-white"
+                className="rounded-xl border border-black/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white"
               >
                 Call 731-414-9539
               </a>
               <a
                 href="mailto:lasterlandsolutions@gmail.com"
-                className="rounded-xl border border-black/15 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:opacity-90"
+                className="rounded-xl border border-black/15 px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
               >
                 Email for Quote
               </a>
             </div>
           </header>
 
-          <div className="grid gap-12 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-24">
+          <div className="grid gap-8 py-10 lg:grid-cols-[1fr_1fr] lg:items-center lg:py-24">
             <div>
-              <h1 className="max-w-sm text-4xl font- leading-none sm:text-5xl lg:text-6xl">
+            <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl shadow-black/30 backdrop-blur">
+            <h1 className="max-w-full text-3xl font-bold leading-tight sm:max-w-xl sm:text-5xl lg:text-6xl">
                 Whether you’re improving your property, maintaining it, or getting it ready for what’s next.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-black">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white">
                 Laster Land Solutions helps property owners get more use, curb appeal, and value from their property with cleanup, grading, stump grinding, landscaping, and site preparation. For contractors, we’re a dependable subcontractor who shows up ready to work, communicates clearly, and gets the job done right.
               </p>
-
+               </div>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href="tel:7314149539"
@@ -133,7 +134,7 @@ export default function LasterLandSolutionsWebsite() {
                 </a>
                 <a
                   href="sms:7314149539"
-                  className="rounded-2xl border border-black/15 px-6 py-4 text-center text-base font-bold text-black transition hover:bg-black/10"
+                  className="rounded-2xl border border-black/15 px-6 py-4 text-center text-base font-bold text-white transition hover:bg-black/10"
                 >
                   Text Photos for a Quote
                 </a>
@@ -142,7 +143,7 @@ export default function LasterLandSolutionsWebsite() {
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
                 {highlights.map((item) => (
                   <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm font-semibold text-black">{item}</p>
+                    <p className="text-sm font-semibold text-white">{item}</p>
                   </div>
                 ))}
               </div>
@@ -152,7 +153,7 @@ export default function LasterLandSolutionsWebsite() {
               <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">Free Quote</p>
                 <h2 className="mt-3 text-2xl font-bold">Get in touch today</h2>
-                <p className="mt-3 text-slate-300">
+                <p className="mt-3 text-white">
                   Call, text, or email with your job details, location, and photos.
                 </p>
 
@@ -236,7 +237,7 @@ export default function LasterLandSolutionsWebsite() {
         <div className="grid gap-4 sm:grid-cols-2">
           {gallery.Stumps.map((img, index) => (
             <div key={index} className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70">
-              <img src={`/Images/${img}`} className="h-56 w-full object-cover" />
+              <img src={`/Images/${img}`}  className="h-48 w-full object-cover sm:h-56"/>
             </div>
           ))}
         </div>
@@ -247,7 +248,7 @@ export default function LasterLandSolutionsWebsite() {
         <div className="grid gap-4 sm:grid-cols-2">
           {gallery.Clearing.map((img, index) => (
             <div key={index} className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70">
-              <img src={`/Images/${img}`} className="h-56 w-full object-cover" />
+              <img src={`/Images/${img}`} className="h-48 w-full object-cover sm:h-56" />
             </div>
           ))}
         </div>
@@ -258,7 +259,7 @@ export default function LasterLandSolutionsWebsite() {
         <div className="grid gap-4 sm:grid-cols-2">
           {gallery.Landscaping.map((img, index) => (
             <div key={index} className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70">
-              <img src={`/Images/${img}`} className="h-56 w-full object-cover" />
+              <img src={`/Images/${img}`} className="h-48 w-full object-cover sm:h-56" />
             </div>
           ))}
         </div>

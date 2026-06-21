@@ -59,7 +59,7 @@ export default function LasterLandSolutionsWebsite() {
    Landscaping: [
     "landscape1.jpg","landscape1a.jpg",
     "landscape2.jpg","landscape3.jpg",
-    "padrenewal1.jpg","padrenewal2.jpg",
+    "padrenewal1.jpg","padrenewal2.JPG",
     "backfill.jpg","backfill1a.jpg",
     "backfill2.jpg",
    ],
